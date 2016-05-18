@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+	<meta charset="utf-8"> 
+	<title></title> 
+	<style>
+		*{
+			margin : 0;
+			padding : 0;
+		}
+
+		#collapse{
+			width:500px;
+			margin : 20px auto;
+		}
+
+		.singlebox{
+			box-sizing:border-box;
+			width:100%;
+			padding:10px;
+			cursor:pointer;
+		}
+
+		.singlebox h4{
+			height:40px;
+			line-height: 40px;
+			background: #ddd;
+			color:#ff0f0f;
+		}
+
+		.singlebox .singlecont{
+			box-sizing:border-box;
+			padding:10px;
+			text-align: justify;
+			display: none;
+			overflow: hidden;
+
+		}
+
+
+	</style>
+</head>
+
+<body>
+	<div id="collapse">
+		<div class="singlebox">
+			<h4>Collapsible Group Item #1</h4>
+			<div class="singlecont">
+				Anim test pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea test proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. 
+				before next line insert O
+				new pargraph line
+				你好吗
+			</div>
+		</div>
+
+		<div class="singlebox">
+			<h4>Collapsible Group Item #2</h4>
+			<div class="singlecont">fa			Be sure to aaadd affriaaa-expanded to the control element. Th attribute explicitly deffafaines the current state of the collapsible element to screen readers and similar asstive technologies. If the collapsible element  closed by default, it should have a value of aria-expanded="false". If you've set the collapiisible element to be open by default using the in class, set aria-expanded="true" on the control instead. The plugin will automatically toggle th attribute based on whether or not the collapsible element has been opened or closed.FDfF
+			</div>
+		</div>
+
+		<div class="singlebox">
+			<h4>Collapsible Group Item #3</h4>
+			<div class="singlecont">
+				dditionally, if your control element  targetting a single collapsible element – i.e. the data-target attribute  pointing to an id selector – you may add an additional 
+			</div>
+		</div>
+
+	</div>
+	<!--[if lte IE 8]>
+	    <script src="../deep-ie8.js"></script>
+	<![endif]-->	
+	<script src="../deepEase.js"></script>
+	<script src="deepCollapse.js"></script>
+	<script>
+		window.onload = function () {
+			var wrapNodes = document.getElementById('collapse');
+			var boxNodes = wrapNodes.getElementsByClassName('singlebox');
+			var headNodes = wrapNodes.getElementsByTagName('h4');
+			var contNodes = wrapNodes.getElementsByClassName('singlecont');	
+			
+			deepCollapse({
+		        wrapNodes : wrapNodes,
+				boxNodes : boxNodes,
+				headNodes : headNodes,
+				contNodes :contNodes,
+		        animate : 'easeOutQuad'
+		    });		
+		};
+	</script>
+
+</body>
+</html>
